@@ -7,6 +7,7 @@ import lombok.Data;
 @Data
 @JsonNaming(PropertyNamingStrategy.LowerCaseWithUnderscoresStrategy.class)
 public class StudentVO {
+    private Integer id;
     private String nama;
     private String alamat;
     private String noHp;

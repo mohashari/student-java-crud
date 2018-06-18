@@ -36,8 +36,21 @@ public class StudentService {
             vo.setKelas(model.getKelas());
             vo.setNoHp(model.getNoHp());
             vo.setStatusAktif(model.getStatusAktif());
+            vo.setId(model.getId());
             vos.add(vo);
         });
         return vos;
+    }
+
+    public StudentVO getDetail(String id) {
+        Student model = studenRepository.getOne(Integer.getInteger(id));
+        StudentVO vo = new StudentVO();
+        vo.setAlamat(model.getAlamat());
+        vo.setNama(model.getNama());
+        vo.setKelas(model.getKelas());
+        vo.setNoHp(model.getNoHp());
+        vo.setStatusAktif(model.getStatusAktif());
+        vo.setId(model.getId());
+        return vo;
     }
 }
